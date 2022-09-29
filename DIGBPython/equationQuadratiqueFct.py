@@ -4,10 +4,12 @@ import math
 print(math.pi)
 
 
+# Fonction pour calculer le Delta
 def Delta(a, b, c):
     return b * b - 4 * a * c
 
 
+# Fonction pour résoudre l'équation en fonction de la valeur de delta (conditions)
 def resoudreEquation(a, b, c):
     delta = Delta(a, b, c)
     if delta > 0:
@@ -21,6 +23,7 @@ def resoudreEquation(a, b, c):
         return print("Une seule solution : ", x3)
 
 
+# Appel de la fonction
 print("Résoudre une équation du second degré : ")
 Delta(1, 0, -1)
 resoudreEquation(1, 0, -1)
