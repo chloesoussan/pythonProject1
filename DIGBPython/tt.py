@@ -40,8 +40,8 @@ def Proportion(sequence, chaine):
     elif len(sequence) <= len(chaine):
         # On parcoure notre liste : de 0 à la longueur n-1 afin de récupérer toutes les occurences de la liste
         for i in range(0, len(chaine) - 1):
-            if chaine[i] == sequence[0].upper():
-                if chaine[i + 1] == sequence[1].upper():
+            if chaine[i] == sequence[0]:
+                if chaine[i + 1] == sequence[1]:
                     count = count + 1
         # On affiche à la fin du Pour, une fonction qui calcule le pourcentage des couples de séquences saisies
         return (100 * count) / len(chaine)

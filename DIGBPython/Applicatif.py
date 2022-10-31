@@ -97,3 +97,12 @@
 #     totalG = sequence.count('g')
 #     CA = 100 * (totalC + totalA) / len(chaine)
 #     return CA
+
+
+# Fonction qui permet d'avoir toutes les combinaisons de séquences possibles d'ADN grâce à la libraire Python itertools
+# from itertools import combinations_with_replacement
+# def combinaison(a):
+#     a = ['a', 'c', 'g', 't']
+#     for i in combinations_with_replacement(a, 2):
+#         print(i)
+#     return i
