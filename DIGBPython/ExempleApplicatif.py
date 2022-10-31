@@ -40,7 +40,13 @@ def Proportion(sequence, chaine):
     elif len(sequence) <= len(chaine):
         # On parcoure notre liste : de 0 à la longueur n-1 afin de récupérer toutes les occurences de la liste
         for i in range(0, len(chaine) - 1):
+            # On va comparer les index(position) de début et de fin de notre chaine aux index de début et de fin de
+            # la séquence saisie :
+            # sequence[0] = position 1 : ex C
+            # sequence[1] = position 2 : ex C-A
             if chaine[i] == sequence[0].upper():
+                # Si ces 2 positions : i et i+1 correspondent à la séquence saisie alors :
+                # On ajoute au compteur pour calculer le nb de fois où il apparaît
                 if chaine[i + 1] == sequence[1].upper():
                     count = count + 1
         # On affiche à la fin du Pour, une fonction qui calcule le pourcentage des couples de séquences saisies
@@ -55,5 +61,10 @@ print("Votre chaîne d'ADN saisie :", chaine)
 
 seq = input("Saisir une séquence : ")
 # Appel de la fonction Proportion qui extrait la séquence saisie et calcule son pourcentage par rapport à la chaine
+
 x = Proportion(seq, chaine)
-print("Il y a", x, "% de", seq.upper(), "dans votre chaîne")
+# Gestion des cas d'erreurs : si la séquence saisie n'existe pas ou qu'il n'y a pas d'occurences
+if x:
+    print("Il y a", x, "% de", seq.upper(), "dans votre chaîne")
+else:
+    print("Erreur,il n'y a pas d'occurences de la séquence saisie ou la séquence n'existe pas dans la chaîne !")
